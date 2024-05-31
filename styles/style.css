@@ -1,5 +1,185 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bakgr-image);
+  background-image: var(--bakgr-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  block-size: 25px;
+  inline-size: 25px;
+  top: 19px;
+  right: 20px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+  block-size: 25px;
+  inline-size: 25px;
+  bottom: 19px;
+  left: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rec {
+  position: absolute;
+  color: var(--accent-color);
+  line-height: 25px;
+  right: 27px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rec::after {
+  content: "";
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 3px 3px var(--accent-color);
+}
+
+.title {
+  font-size: var(--font-size-standart);
+  line-height: 82.5%;
+  color: var(--title-color);
+}
+
+.header-title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  padding: 274px 0 114px;
+  display: inline;
+  margin-inline-start: -20px;
+}
+
+.header-text {
+  align-self: flex-end;
+  width: clamp(355px, 50%, 491px);
+  margin-bottom: 114px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 23.4px;
+  justify-content: end;
+}
+
+.header__theme-menu-button {
+  padding: 0 13px;
+  cursor: pointer;
+  color: var(--btn-color);
+  height: 27px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--btn-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--decor-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--decor-color);
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* медиа запросы */
+
+@media (width <=768px) {
+  .header__theme-menu {
+  padding-top: 173.5px;
+  align-self: flex-end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .header-title {
+    padding: 170px 0 162px;
+  }
+}
+
+
+@media (width <=680px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header__theme-menu {
+    padding-top: 76px;
+  }
+
+  .header-title {
+    margin-inline-start: 0;
+    font-size: var(--font-size-mini);
+    padding: 65px 0 55px;
+  }
+
+  .header-text {
+  margin-bottom: 56px;
+  }
+
+  .rec {
+    right: 18px;
+    top: 10px;
+  }
+
+  .decorated-zone::after {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .decorated-zone::before {
+    right: 10px;
+    top: 10px;
+  }
 }

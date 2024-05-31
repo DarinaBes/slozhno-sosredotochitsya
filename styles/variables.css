@@ -2,3 +2,19 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --bakgr-image: url(../images/cover-image-dark.png);
+  --bakgr-color: #000028;
+  --title-color: #db00ff;
+  --text-color: #000028;
+  --accent-color: #ff0070;
+  --title-shadow: #ff0070;
+  --decor-color: #ff0070;
+  --small-text-color: #f1b2ce;
+  --btn-color: var(--accent-color);
+  --section-text-color: var(--accent-color);
+  --font-family: "IBM Plex Mono", "monospace";
+  --font-size: 18px;
+  --font-size-mini: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
