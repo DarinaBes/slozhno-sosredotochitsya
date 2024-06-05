@@ -88,7 +88,7 @@ header {
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-bakgr);
   color: var(--text-color);
   font-weight: 700;
   font-size: inherit;
@@ -124,7 +124,7 @@ header {
 
 .link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--title-shadow);
+  text-shadow: 2px 2px 0 var(--accent-color-bakgr);
 }
 
 .link:hover {
@@ -186,7 +186,7 @@ header {
 }
 
 .content__title {
-  color: var(--accent-color);
+  color: var(--decor-color);
   font-size: 18px;
   line-height: 23.4px;
 }

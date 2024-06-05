@@ -1,12 +1,38 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bakgr-image: url(../images/cover-image-light.png);
+  --bakgr-color: #fff1f7;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+  --accent-color: #ff0070;
+  --accent-color-bakgr: #ff8dcb;
+  --decor-color: #353430;
+  --small-text-color: #353430;
+  --btn-color: #353430;
+  --section-text-color: var(--accent-color);
+  --font-family: "IBM Plex Mono", "monospace";
+  --font-size: 18px;
+  --font-size-mini: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bakgr-image: url(../images/cover-image-light.png);
+    --bakgr-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --text-color: #353430;
+    --accent-color: #ff0070;
+    --accent-color-bakgr: #ff8dcb;
+    --decor-color: #353430;
+    --small-text-color: #353430;
+    --btn-color: #353430;
+    --section-text-color: var(--accent-color);
+    --font-family: "IBM Plex Mono", "monospace";
+    --font-size: 18px;
+    --font-size-mini: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+.page.theme_light .rec {
+  display: none;
 }
