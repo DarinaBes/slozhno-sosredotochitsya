@@ -12,8 +12,8 @@
 }
 
 header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 120px 1fr;
   padding: 20px;
   position: relative;
   min-height: 100vh;
@@ -51,6 +51,7 @@ header {
 }
 
 .rec {
+  text-transform: uppercase;
   position: absolute;
   color: var(--accent-color);
   line-height: 25px;
@@ -58,6 +59,8 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  top: 20px;
+  visibility: var(--rec-visible);
 }
 
 .rec::after {
@@ -77,14 +80,13 @@ header {
 
 .header__title {
   text-shadow: 4px 4px 0 var(--accent-color);
-  padding: 274px 0 114px;
   margin-inline-start: -20px;
 }
 
 .header__text {
-  align-self: flex-end;
   width: clamp(350px, 50%, 500px);
   margin-block-end: 114px;
+  place-self: end;
 }
 
 .title-decor {
@@ -104,7 +106,7 @@ header {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--btn-color);
+  outline: 1px solid var(--btn-color-hover);
 }
 
 .header__theme-menu-button:focus {
@@ -147,7 +149,6 @@ header {
   padding-inline: 20px;
   padding-block: 60px;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .content__section {
@@ -178,7 +179,7 @@ header {
 }
 
 .content__section:nth-child(3) .content__title {
-  grid-row: span 5;
+  grid-row: span 6;
 }
 
 .content__section:nth-child(3) .title-margin {
@@ -268,17 +269,14 @@ header {
 /* медиа запросы */
 
 @media (width <=768px) {
-  .header__theme-menu {
-    padding-top: 170px;
-    align-self: flex-end;
-  }
-
   .header__theme-menu-list {
+    align-items: end;
     flex-direction: column;
+    padding-top: 171px;
   }
 
   .header__title {
-    padding: 170px 0 162px;
+    padding-top: 16px;
   }
 
   .header__text {
@@ -302,6 +300,7 @@ header {
 @media (width <=680px) {
   .header {
     padding: 10px;
+    grid-template-rows: 1fr 220px 1fr;
   }
 
   .content {
@@ -310,14 +309,14 @@ header {
     padding-block: 40px;
   }
 
-  .header__theme-menu {
-    padding-top: 64px;
+  .header__theme-menu-list {
+    padding-top: 62px;
   }
 
   .header__title {
     margin-inline-start: 0;
     font-size: var(--font-size-mini);
-    padding: 66px 0 56px;
+    justify-self: end;
   }
 
   .header__text {
@@ -325,7 +324,7 @@ header {
   }
 
   .rec {
-    right: 18px;
+    right: 20px;
     top: 10px;
   }
 
@@ -360,5 +359,9 @@ header {
 
   .footer {
     padding: 10px;
+  }
+
+  .footer__title {
+    font-size: var(--font-size-mini);
   }
 }

@@ -8,11 +8,13 @@
   --decor-color: #353430;
   --small-text-color: #353430;
   --btn-color: #353430;
+  --btn-color-hover: #35343040;
   --section-text-color: var(--accent-color);
   --font-family: "IBM Plex Mono", "monospace";
   --font-size: 18px;
   --font-size-mini: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --rec-visible: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,13 +28,12 @@
     --decor-color: #353430;
     --small-text-color: #353430;
     --btn-color: #353430;
+    --btn-color-hover: #35343040;
     --section-text-color: var(--accent-color);
     --font-family: "IBM Plex Mono", "monospace";
     --font-size: 18px;
     --font-size-mini: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --rec-visible: hidden;
   }
-}
-.page.theme_light .rec {
-  display: none;
 }
