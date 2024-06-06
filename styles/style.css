@@ -178,12 +178,18 @@ header {
   grid-template-columns: 315px 1fr;
 }
 
-.content__section:nth-child(3) .content__title {
-  grid-row: span 6;
+.section__text {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.content__section:nth-child(3) .title-margin {
-  margin-block-end: 10px;
+.section__text-advice .content__text {
+  padding-top: 10px;
+}
+
+.section__text-advice:not(:last-child) {
+  padding-bottom: 20px;
 }
 
 .content__title {
@@ -276,11 +282,11 @@ header {
   }
 
   .header__title {
-    padding-top: 16px;
+    padding-top: 13px;
   }
 
   .header__text {
-    margin-block-end: 166px;
+    margin-block-end: 163px;
   }
 
   .content__section:first-child {
@@ -320,7 +326,8 @@ header {
   }
 
   .header__text {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
+    justify-self: auto;
   }
 
   .rec {
